@@ -50,6 +50,24 @@ const filterFunc = function (selectedValue) {
 
 }
 
+//add event listner to download resume
+
+
+    document.getElementById("download-resume").addEventListener("click", function () {
+        // Path to the resume file
+        const resumePath = "assets/resume.pdf";
+
+        //  A temporary anchor element
+        const link = document.createElement("a");
+        link.href = resumePath;
+        link.download = "Shashi_Prabha_Resume.pdf"; // File name
+        link.click(); // Trigger download
+
+        // Clean up
+        link.remove();
+    });
+
+
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
 

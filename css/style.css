@@ -601,6 +601,29 @@
     gap: 15px;
     margin-bottom: 25px;
   }
+  #download-resume{
+    float:right;
+    cursor: pointer;
+  }
+
+  #download-resume::before{
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background: var(--bg-gradient-jet);
+    border-radius: inherit;
+    z-index: -1;
+    transition: var(--transition-1);
+
+  }
+
+  #download-resume:hover{
+    background: var(--bg-gradient-yellow-1);
+  }
+
+  #download-resume:hover::backdrop{
+    background: var(--bg-gradient-yellow-2);
+  }
   
   .timeline-list {
     font-size: var(--fs-6);
